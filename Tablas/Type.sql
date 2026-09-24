@@ -1,0 +1,8 @@
+CREATE TABLE Type(
+    idType NUMBER(8),
+    name VARCHAR(50)
+);
+
+ALTER TABLE Type
+    ADD CONSTRAINT typePk PRIMARY KEY (idType)
+    USING INDEX TABLESPACE GEIndex;

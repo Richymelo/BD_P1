@@ -1,0 +1,8 @@
+CREATE TABLE Size (
+    idSize NUMBER(8),
+    name VARCHAR(50)
+);
+
+ALTER TABLE Size
+    ADD CONSTRAINT sizePk PRIMARY KEY (idSize)
+    USING INDEX TABLESPACE GEIndex;
