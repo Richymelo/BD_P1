@@ -1,7 +1,11 @@
 CREATE TABLE Breed (
-    idBreed NUMBER(8),
-    petTypeId NUMBER(8), --FK
-    name VARCHAR(50)
+    id NUMBER(8) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    petTypeId NUMBER(8) NOT NULL, --FK
+    name VARCHAR2(50) NOT NULL
 );
 
 ALTER TABLE Breed

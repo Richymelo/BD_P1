@@ -1,12 +1,16 @@
 CREATE TABLE Log (
-    idLog NUMBER(8),
-    affectedTable VARCHAR(50),
-    affectedSlot VARCHAR(50),
-    lastValue VARCHAR(50),
-    newValue VARCHAR(50),
-    date DATE,
-    operationType VARCHAR(50),
-    userId NUMBER(8) --FK
+    id NUMBER(8) NOT NULL,
+    affectedTable VARCHAR2(50) NOT NULL,
+    affectedSlot VARCHAR2(50) NOT NULL,
+    lastValue VARCHAR2(50) NOT NULL,
+    newValue VARCHAR2(50) NOT NULL,
+    date DATE NOT NULL,
+    operationType VARCHAR2(50) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    userId NUMBER(8) NOT NULL --FK
 );
 
 ALTER TABLE Log

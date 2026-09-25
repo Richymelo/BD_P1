@@ -1,10 +1,14 @@
 CREATE TABLE DonationReport (
-    idDonationReport NUMBER(8),
-    description VARCHAR(50),
-    amount NUMBER(8),
-    date DATE,
-    donationType VARCHAR(50),
-    currencyId NUMBER(8) --FK
+    id NUMBER(8) NOT NULL,
+    description VARCHAR2(50) NOT NULL,
+    amount NUMBER(8) NOT NULL,
+    date DATE NOT NULL,
+    donationType VARCHAR2(50) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    currencyId NUMBER(8) NOT NULL --FK
 );
 
 ALTER TABLE DonationReport

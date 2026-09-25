@@ -1,7 +1,11 @@
 CREATE TABLE AcceptedSize (
-    idAcceptedSize NUMBER(8),
-    name VARCHAR(50),
-    fosterHomeId NUMBER(8) --FK
+    idAcceptedSize NUMBER(8) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    fosterHomeId NUMBER(8) NOT NULL--FK
 );
 
 ALTER TABLE AcceptedSize
@@ -11,3 +15,6 @@ ALTER TABLE AcceptedSize
 ALTER TABLE AcceptedSize
     ADD CONSTRAINT acceptedSizeXFosterHomeFK FOREIGN KEY (fosterHomeId) 
     REFERENCES FosterHome(idFosterHome);
+    
+    
+    

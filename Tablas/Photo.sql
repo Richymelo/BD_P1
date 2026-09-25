@@ -1,8 +1,12 @@
 CREATE TABLE Photo (
-    idPhoto NUMBER(8),
-    name VARCHAR(50),
-    acceptedTypeId NUMBER(8), --FK
-    typeId NUMBER(8) --FK
+    id NUMBER(8) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    acceptedTypeId NUMBER(8) NOT NULL, --FK
+    typeId NUMBER(8) NOT NULL --FK
 );
 
 ALTER TABLE Photo

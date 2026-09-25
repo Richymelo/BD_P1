@@ -1,9 +1,13 @@
 CREATE TABLE Match (
-    idMatch NUMBER(8),
-    percentaje NUMBER(8),
-    date DATE,
-    lostPetId NUMBER(8), --FK
-    foundPetId NUMBER(8) --FK
+    id NUMBER(8) NOT NULL,
+    percentaje NUMBER(8) NOT NULL,
+    date DATE NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    lostPetId NUMBER(8) NOT NULL, --FK
+    foundPetId NUMBER(8) NOT NULL --FK
 );
 
 ALTER TABLE Match

@@ -1,11 +1,15 @@
 CREATE TABLE Person (
-    idPerson NUMBER(8),
-    firstName VARCHAR(50),
-    secondName VARCHAR(50),
-    firstSurname VARCHAR(50),
-    secondSurname VARCHAR(50),
-    email VARCHAR(50),
-    phone NUMBER(8)
+    id NUMBER(8) NOT NULL,
+    firstName VARCHAR2(50) NOT NULL,
+    secondName VARCHAR2(50) NOT NULL,
+    firstSurname VARCHAR2(50) NOT NULL,
+    secondSurname VARCHAR2(50) NOT NULL,
+    email VARCHAR2(50) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    phone NUMBER(8) NOT NULL
 );
 
 ALTER TABLE Person

@@ -1,26 +1,30 @@
 CREATE TABLE Pet (
-    idPet NUMBER(8),
-    name VARCHAR(50),
-    chipId VARCHAR(50),
-    dateOfBirth DATE,
-    age NUMBER(8),
-    date DATE,
-    rewardAmount NUMBER(8),
-    needsSpace VARCHAR(50),
-    place VARCHAR(50),
-    description VARCHAR(50),
-    districtId NUMBER(8), --FK
-    breedId NUMBER(8), --FK
-    stateId NUMBER(8), --FK
-    colorId NUMBER(8), --FK
-    sizeId NUMBER(8), --FK
-    energyLevelId NUMBER(8), --FK
-    trainabilityId NUMBER(8), --FK
-    veterinarianId NUMBER(8), --FK
-    diseaseId NUMBER(8), --FK
-    fosterHomeId NUMBER(8), --FK
-    rescuerId NUMBER(8), --FK
-    severityId NUMBER(8) --FK
+    id NUMBER(8) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    chipId VARCHAR2(50) NOT NULL,
+    dateOfBirth DATE NOT NULL,
+    age NUMBER(8) NOT NULL,
+    date DATE NOT NULL,
+    rewardAmount NUMBER(8) NOT NULL,
+    needsSpace VARCHAR2(50) NOT NULL,
+    place VARCHAR2(50) NOT NULL,
+    description VARCHAR2(50) NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    districtId NUMBER(8) NOT NULL, --FK
+    breedId NUMBER(8) NOT NULL, --FK
+    stateId NUMBER(8) NOT NULL, --FK
+    colorId NUMBER(8) NOT NULL, --FK
+    sizeId NUMBER(8) NOT NULL, --FK
+    energyLevelId NUMBER(8) NOT NULL, --FK
+    trainabilityId NUMBER(8) NOT NULL, --FK
+    veterinarianId NUMBER(8) NOT NULL, --FK
+    diseaseId NUMBER(8) NOT NULL, --FK
+    fosterHomeId NUMBER(8) NOT NULL, --FK
+    rescuerId NUMBER(8) NOT NULL, --FK
+    severityId NUMBER(8) NOT NULL --FK
 );
 
 ALTER TABLE Pet
