@@ -1,5 +1,5 @@
 CREATE TABLE Disease (
-    id NUMBER(8) NOT NULL,
+    idDisease NUMBER(8) NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
     createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
     modifiedBy VARCHAR2(50) NOT NULL,

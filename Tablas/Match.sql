@@ -1,5 +1,5 @@
 CREATE TABLE Match (
-    id NUMBER(8) NOT NULL,
+    idMatch NUMBER(8) NOT NULL,
     percentaje NUMBER(8) NOT NULL,
     date DATE NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,

@@ -16,7 +16,7 @@ ALTER TABLE AdoptionApplication
 
 ALTER TABLE AdoptionApplication
     ADD CONSTRAINT adoptionApplicationXAdopterFK FOREIGN KEY (AdopterId) 
-    REFERENCES Adopter(idAdopter);
+    REFERENCES Adopter(userId);
 
 ALTER TABLE AdoptionApplication
     ADD CONSTRAINT adoptionApplicationXStatusFK FOREIGN KEY (statusId) 

@@ -1,5 +1,5 @@
 CREATE TABLE Donation (
-    id NUMBER(8) NOT NULL,
+    idDonation NUMBER(8) NOT NULL,
     amount NUMBER(8) NOT NULL,
     date DATE NOT NULL,
     donationType VARCHAR2(50) NOT NULL,

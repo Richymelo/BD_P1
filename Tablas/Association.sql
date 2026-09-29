@@ -1,6 +1,6 @@
 --
 CREATE TABLE Association (
-    id NUMBER(8) NOT NULL,
+    idAssociation NUMBER(8) NOT NULL,
     description VARCHAR2(50) NOT NULL,
     phone NUMBER(8) NOT NULL,
     email VARCHAR2(50) NOT NULL,

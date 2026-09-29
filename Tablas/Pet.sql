@@ -1,5 +1,5 @@
 CREATE TABLE Pet (
-    id NUMBER(8) NOT NULL,
+    idPet NUMBER(8) NOT NULL,
     name VARCHAR2(50) NOT NULL,
     chipId VARCHAR2(50) NOT NULL,
     dateOfBirth DATE NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE Pet (
     modifiedAt TIMESTAMP(6) NOT NULL,
     districtId NUMBER(8) NOT NULL, --FK
     breedId NUMBER(8) NOT NULL, --FK
-    stateId NUMBER(8) NOT NULL, --FK
+    statusId NUMBER(8) NOT NULL, --FK
     colorId NUMBER(8) NOT NULL, --FK
     sizeId NUMBER(8) NOT NULL, --FK
     energyLevelId NUMBER(8) NOT NULL, --FK
@@ -40,8 +40,8 @@ ALTER TABLE Pet
     REFERENCES Breed(idBreed);
 
 ALTER TABLE Pet
-    ADD CONSTRAINT petXStateFK FOREIGN KEY (stateId) 
-    REFERENCES State(idState);
+    ADD CONSTRAINT petXStateFK FOREIGN KEY (statusId) 
+    REFERENCES Status(idStatus);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXColorFK FOREIGN KEY (colorId) 

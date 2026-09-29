@@ -1,5 +1,5 @@
 CREATE TABLE Person (
-    id NUMBER(8) NOT NULL,
+    idPerson NUMBER(8) NOT NULL,
     firstName VARCHAR2(50) NOT NULL,
     secondName VARCHAR2(50) NOT NULL,
     firstSurname VARCHAR2(50) NOT NULL,
