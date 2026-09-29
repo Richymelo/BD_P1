@@ -8,5 +8,5 @@ CREATE TABLE Status (
 );
 
 ALTER TABLE Status
-    ADD CONSTRAINT statusPk PRIMARY KEY (idStatus)
+    ADD CONSTRAINT statusPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;

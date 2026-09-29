@@ -8,5 +8,5 @@ CREATE TABLE Trainability (
 );
 
 ALTER TABLE Trainability
-    ADD CONSTRAINT trainabilityPk PRIMARY KEY (idTrainability)
+    ADD CONSTRAINT trainabilityPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;

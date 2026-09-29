@@ -13,7 +13,7 @@ CREATE TABLE Blacklist (
 );
 
 ALTER TABLE Blacklist
-    ADD CONSTRAINT blacklistPk PRIMARY KEY (idBlacklist)
+    ADD CONSTRAINT blacklistPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Blacklist

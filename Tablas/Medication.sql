@@ -9,7 +9,7 @@ CREATE TABLE Medication (
 );
 
 ALTER TABLE Medication
-    ADD CONSTRAINT medicationPk PRIMARY KEY (idMedication)
+    ADD CONSTRAINT medicationPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Medication

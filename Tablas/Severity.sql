@@ -8,5 +8,5 @@ CREATE TABLE Severity (
 );
 
 ALTER TABLE Severity
-    ADD CONSTRAINT severityPk PRIMARY KEY (idSeverity)
+    ADD CONSTRAINT severityPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;

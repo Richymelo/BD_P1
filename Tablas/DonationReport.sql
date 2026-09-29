@@ -12,7 +12,7 @@ CREATE TABLE DonationReport (
 );
 
 ALTER TABLE DonationReport
-    ADD CONSTRAINT donationReportPk PRIMARY KEY (idDonationReport)
+    ADD CONSTRAINT donationReportPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE DonationReport

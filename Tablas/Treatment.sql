@@ -9,7 +9,7 @@ CREATE TABLE Treatment (
 );
 
 ALTER TABLE Treatment
-    ADD CONSTRAINT treatmentPk PRIMARY KEY (idTreatment)
+    ADD CONSTRAINT treatmentPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Treatment

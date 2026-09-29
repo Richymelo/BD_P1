@@ -1,5 +1,5 @@
 CREATE TABLE Adoption (
-    idAdoption NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     rating NUMBER(8) NOT NULL,
     date DATE NOT NULL,
     notes VARCHAR2(50) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE Adoption (
 );
 
 ALTER TABLE Adoption
-    ADD CONSTRAINT adoptionPk PRIMARY KEY (idAdoption)
+    ADD CONSTRAINT adoptionPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Adoption

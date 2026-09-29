@@ -8,5 +8,5 @@ CREATE TABLE Country (
 );
 
 ALTER TABLE Country
-    ADD CONSTRAINT countryPk PRIMARY KEY (idCountry)
+    ADD CONSTRAINT countryPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;

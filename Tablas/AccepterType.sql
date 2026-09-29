@@ -1,5 +1,5 @@
 CREATE TABLE AcceptedType (
-    idAcceptedType NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     name VARCHAR2(50) NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
     createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
@@ -9,7 +9,7 @@ CREATE TABLE AcceptedType (
 );
 
 ALTER TABLE AcceptedType
-    ADD CONSTRAINT acceptedTypePk PRIMARY KEY (idAcceptedType)
+    ADD CONSTRAINT acceptedTypePk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE AcceptedType

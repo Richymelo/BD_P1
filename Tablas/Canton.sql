@@ -9,7 +9,7 @@ CREATE TABLE Canton (
 );
 
 ALTER TABLE Canton
-    ADD CONSTRAINT cantonPk PRIMARY KEY (idCanton)
+    ADD CONSTRAINT cantonPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Canton

@@ -9,7 +9,7 @@ CREATE TABLE District (
 );
 
 ALTER TABLE District
-    ADD CONSTRAINT districtPk PRIMARY KEY (idDistrict)
+    ADD CONSTRAINT districtPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE District
