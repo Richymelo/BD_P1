@@ -9,5 +9,5 @@ CREATE TABLE Currency (
 );
 
 ALTER TABLE Currency
-    ADD CONSTRAINT currencyPk PRIMARY KEY (idCurrency)
+    ADD CONSTRAINT currencyPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;

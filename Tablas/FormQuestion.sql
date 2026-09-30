@@ -9,7 +9,7 @@ CREATE TABLE FormQuestion (
 );
 
 ALTER TABLE FormQuestion
-    ADD CONSTRAINT formQuestionPk PRIMARY KEY (idFormQuestion)
+    ADD CONSTRAINT formQuestionPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE FormQuestion

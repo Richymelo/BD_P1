@@ -10,7 +10,7 @@ CREATE TABLE FosterHome (
 );
 
 ALTER TABLE FosterHome
-    ADD CONSTRAINT fosterHomePk PRIMARY KEY (idFosterHome)
+    ADD CONSTRAINT fosterHomePk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE FosterHome

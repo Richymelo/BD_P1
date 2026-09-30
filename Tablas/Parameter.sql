@@ -10,5 +10,5 @@ CREATE TABLE Parameter (
 );
 
 ALTER TABLE Parameter
-    ADD CONSTRAINT parameterPk PRIMARY KEY (idParameter)
+    ADD CONSTRAINT parameterPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;

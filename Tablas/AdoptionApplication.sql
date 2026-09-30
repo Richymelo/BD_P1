@@ -1,5 +1,5 @@
 CREATE TABLE AdoptionApplication (
-    idAdoptionApplication NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     name VARCHAR2(50) NOT NULL,
     date DATE NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
@@ -11,7 +11,7 @@ CREATE TABLE AdoptionApplication (
 );
 
 ALTER TABLE AdoptionApplication
-    ADD CONSTRAINT adoptionApplicationPk PRIMARY KEY (idAdoptionApplication)
+    ADD CONSTRAINT adoptionApplicationPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE AdoptionApplication

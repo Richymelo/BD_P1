@@ -12,7 +12,7 @@ CREATE TABLE Association (
 
 ALTER TABLE Association
 
-    ADD CONSTRAINT associationPk PRIMARY KEY (idAssociation)
+    ADD CONSTRAINT associationPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
     
 

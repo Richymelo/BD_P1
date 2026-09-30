@@ -9,7 +9,7 @@ CREATE TABLE Province (
 );
 
 ALTER TABLE Province
-    ADD CONSTRAINT provincePk PRIMARY KEY (idProvince)
+    ADD CONSTRAINT provincePk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Province

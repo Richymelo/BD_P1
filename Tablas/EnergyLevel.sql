@@ -7,5 +7,5 @@ CREATE TABLE EnergyLevel (
     name VARCHAR2(50) NOT NULL
 );
 ALTER TABLE EnergyLevel
-    ADD CONSTRAINT energyLevelPk PRIMARY KEY (idEnergyLevel)
+    ADD CONSTRAINT energyLevelPk PRIMARY KEY (id)
     USING INDEX TABLESPACE GEIndex;
