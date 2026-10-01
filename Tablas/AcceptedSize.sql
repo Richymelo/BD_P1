@@ -14,7 +14,7 @@ ALTER TABLE AcceptedSize
 
 ALTER TABLE AcceptedSize
     ADD CONSTRAINT acceptedSizeXFosterHomeFK FOREIGN KEY (fosterHomeId) 
-    REFERENCES FosterHome(idFosterHome);
+    REFERENCES FosterHome(id);
     
     
     

@@ -14,4 +14,4 @@ ALTER TABLE AcceptedType
 
 ALTER TABLE AcceptedType
     ADD CONSTRAINT acceptedTypeXFosterHomeFK FOREIGN KEY (fosterHomeId) 
-    REFERENCES FosterHome(idFosterHome);
+    REFERENCES FosterHome(id);
