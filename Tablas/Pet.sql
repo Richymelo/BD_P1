@@ -1,5 +1,5 @@
 CREATE TABLE Pet (
-    idPet NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     name VARCHAR2(50) NOT NULL,
     chipId VARCHAR2(50) NOT NULL,
     dateOfBirth DATE NOT NULL,
@@ -33,48 +33,48 @@ ALTER TABLE Pet
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXDistrictFK FOREIGN KEY (districtId) 
-    REFERENCES District(idDistrict);
+    REFERENCES District(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXBreedFK FOREIGN KEY (breedId) 
-    REFERENCES Breed(idBreed);
+    REFERENCES Breed(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXStateFK FOREIGN KEY (statusId) 
-    REFERENCES Status(idStatus);
+    REFERENCES Status(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXColorFK FOREIGN KEY (colorId) 
-    REFERENCES Color(idColor);
+    REFERENCES Color(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXSizeFK FOREIGN KEY (sizeId) 
-    REFERENCES Size(idSize);
+    REFERENCES Size(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXEnergyLevelFK FOREIGN KEY (energyLevelId) 
-    REFERENCES EnergyLevel(idEnergyLevel);
+    REFERENCES EnergyLevel(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXTrainabilityFK FOREIGN KEY (trainabilityId) 
-    REFERENCES Trainability(idTrainability);
+    REFERENCES Trainability(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXVeterinarianFK FOREIGN KEY (veterinarianId) 
-    REFERENCES Veterinarian(personId);
+    REFERENCES Veterinarian(userId);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXDiseaseFK FOREIGN KEY (diseaseId) 
-    REFERENCES Disease(idDisease);
+    REFERENCES Disease(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXFosterHomeFK FOREIGN KEY (fosterHomeId) 
-    REFERENCES FosterHome(idFosterHome);
+    REFERENCES FosterHome(id);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXRescuerFK FOREIGN KEY (rescuerId) 
-    REFERENCES Rescuer(personId);
+    REFERENCES Rescuer(userId);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXSeverityFK FOREIGN KEY (severityId) 
-    REFERENCES Severity(idSeverity);
+    REFERENCES Severity(id);

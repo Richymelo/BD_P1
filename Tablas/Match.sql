@@ -1,5 +1,5 @@
 CREATE TABLE Match (
-    idMatch NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     percentaje NUMBER(8) NOT NULL,
     date DATE NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
@@ -16,8 +16,8 @@ ALTER TABLE Match
 
 ALTER TABLE Match
     ADD CONSTRAINT matchXLostPetFK FOREIGN KEY (lostPetId) 
-    REFERENCES Pet(idPet);
+    REFERENCES Pet(id);
 
 ALTER TABLE Match
     ADD CONSTRAINT matchXFoundPetFK FOREIGN KEY (foundPetId) 
-    REFERENCES Pet(idPet);
+    REFERENCES Pet(id);

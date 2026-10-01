@@ -12,4 +12,4 @@ ALTER TABLE Adopter
 
 ALTER TABLE Adopter
     ADD CONSTRAINT adopterXUserFK FOREIGN KEY (userId) 
-    REFERENCES User(idUser);
+    REFERENCES User(id);

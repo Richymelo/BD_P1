@@ -12,4 +12,4 @@ ALTER TABLE Donator
 
 ALTER TABLE Donator
     ADD CONSTRAINT donatorXUserFK FOREIGN KEY (userId) 
-    REFERENCES User(idUser);
+    REFERENCES User(id);

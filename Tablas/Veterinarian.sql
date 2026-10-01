@@ -12,4 +12,4 @@ ALTER TABLE Veterinarian
 
 ALTER TABLE Veterinarian
     ADD CONSTRAINT veterinarianXUserFK FOREIGN KEY (userId) 
-    REFERENCES User(idUser);
+    REFERENCES User(id);

@@ -20,4 +20,4 @@ ALTER TABLE AdoptionApplication
 
 ALTER TABLE AdoptionApplication
     ADD CONSTRAINT adoptionApplicationXStatusFK FOREIGN KEY (statusId) 
-    REFERENCES Status(idStatus);
+    REFERENCES Status(id);

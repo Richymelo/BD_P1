@@ -14,4 +14,4 @@ ALTER TABLE FormQuestion
 
 ALTER TABLE FormQuestion
     ADD CONSTRAINT formQuestionXAdoptionApplicationFK FOREIGN KEY (aplicationId) 
-    REFERENCES AdoptionApplication(idAdoptionApplication);
+    REFERENCES AdoptionApplication(id);

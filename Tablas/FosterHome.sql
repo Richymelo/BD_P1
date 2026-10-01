@@ -1,5 +1,5 @@
 CREATE TABLE FosterHome (
-    idFosterHome NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     name VARCHAR2(50) NOT NULL,
     requiresFood VARCHAR2(50) NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,

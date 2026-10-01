@@ -1,5 +1,5 @@
 CREATE TABLE Donation (
-    idDonation NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     amount NUMBER(8) NOT NULL,
     date DATE NOT NULL,
     donationType VARCHAR2(50) NOT NULL,
@@ -23,12 +23,12 @@ ALTER TABLE Donation
 
 ALTER TABLE Donation
     ADD CONSTRAINT donationXAssociationFK FOREIGN KEY (associationId) 
-    REFERENCES Association(idAssociation);
+    REFERENCES Association(id);
 
 ALTER TABLE Donation
     ADD CONSTRAINT donationXDonationReportFK FOREIGN KEY (donationReportId) 
-    REFERENCES DonationReport(idDonationReport);
+    REFERENCES DonationReport(id);
 
 ALTER TABLE Donation
     ADD CONSTRAINT donationXCurrencyFK FOREIGN KEY (currencyId) 
-    REFERENCES Currency(idCurrency);
+    REFERENCES Currency(id);

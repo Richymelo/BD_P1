@@ -1,5 +1,5 @@
 CREATE TABLE DonationReport (
-    idDonationReport NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     description VARCHAR2(50) NOT NULL,
     amount NUMBER(8) NOT NULL,
     date DATE NOT NULL,
@@ -17,4 +17,4 @@ ALTER TABLE DonationReport
 
 ALTER TABLE DonationReport
     ADD CONSTRAINT donationReportXCurrencyFK FOREIGN KEY (currencyId) 
-    REFERENCES Currency(idCurrency);
+    REFERENCES Currency(id);

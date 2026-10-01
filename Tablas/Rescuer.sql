@@ -12,4 +12,4 @@ ALTER TABLE Rescuer
 
 ALTER TABLE Rescuer
     ADD CONSTRAINT rescuerXUserFK FOREIGN KEY (userId) 
-    REFERENCES User(idUser);
+    REFERENCES User(id);

@@ -1,5 +1,5 @@
 CREATE TABLE District (
-    idDistrict NUMBER(8) NOT NULL,
+    id NUMBER(8) NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
     createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
     modifiedBy VARCHAR2(50) NOT NULL,
@@ -14,4 +14,4 @@ ALTER TABLE District
 
 ALTER TABLE District
     ADD CONSTRAINT districtXCantonFK FOREIGN KEY (cantonId) 
-    REFERENCES Canton(idCanton);
+    REFERENCES Canton(id);
