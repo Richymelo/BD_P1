@@ -17,4 +17,4 @@ ALTER TABLE DonationReport
 
 ALTER TABLE DonationReport
     ADD CONSTRAINT donationReportXCurrencyFK FOREIGN KEY (currencyId) 
-    REFERENCES Currency(id);
+    REFERENCES Currency(idCurrency);

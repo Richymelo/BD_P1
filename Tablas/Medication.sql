@@ -14,4 +14,4 @@ ALTER TABLE Medication
 
 ALTER TABLE Medication
     ADD CONSTRAINT medicationXTreatmentFK FOREIGN KEY (treatmentId) 
-    REFERENCES Treatment(id);
+    REFERENCES Treatment(idTreatment);

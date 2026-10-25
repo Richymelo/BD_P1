@@ -1,9 +1,9 @@
 CREATE TABLE Person (
     id NUMBER(8) NOT NULL,
     firstName VARCHAR2(50) NOT NULL,
-    secondName VARCHAR2(50) NOT NULL,
+    secondName VARCHAR2(50),
     firstSurname VARCHAR2(50) NOT NULL,
-    secondSurname VARCHAR2(50) NOT NULL,
+    secondSurname VARCHAR2(50),
     email VARCHAR2(50) NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
     createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,

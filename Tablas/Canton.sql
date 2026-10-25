@@ -14,4 +14,4 @@ ALTER TABLE Canton
 
 ALTER TABLE Canton
     ADD CONSTRAINT cantonXProvinceFK FOREIGN KEY (provinceId) 
-    REFERENCES Province(id);
+    REFERENCES Province(idProvince);

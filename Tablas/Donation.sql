@@ -1,16 +1,15 @@
 CREATE TABLE Donation (
     id NUMBER(8) NOT NULL,
-    amount NUMBER(8) NOT NULL,
-    date DATE NOT NULL,
-    donationType VARCHAR2(50) NOT NULL,
+    amount NUMBER NOT NULL,
+    "date" DATE NOT NULL,
+    donatorId NUMBER(8) NOT NULL,
+    associationId NUMBER(8) NOT NULL,
+    donationTypeId NUMBER(8) NOT NULL,
+    currencyId NUMBER(8) NOT NULL,
     createdBy VARCHAR2(50) NOT NULL,
     createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
     modifiedBy VARCHAR2(50) NOT NULL,
-    modifiedAt TIMESTAMP(6) NOT NULL,
-    donatorId NUMBER(8) NOT NULL, --FK
-    associationId NUMBER(8) NOT NULL, --FK
-    donationReportId NUMBER(8) NOT NULL, --FK
-    currencyId NUMBER(8) NOT NULL --FK
+    modifiedAt TIMESTAMP(6) NOT NULL
 );
 
 ALTER TABLE Donation
@@ -18,17 +17,13 @@ ALTER TABLE Donation
     USING INDEX TABLESPACE GEIndex;
 
 ALTER TABLE Donation
-    ADD CONSTRAINT donationXDonatorFK FOREIGN KEY (donatorId) 
-    REFERENCES Donator(idDonator);
-
-ALTER TABLE Donation
-    ADD CONSTRAINT donationXAssociationFK FOREIGN KEY (associationId) 
+    ADD CONSTRAINT fkDonationAssociation FOREIGN KEY (associationId) 
     REFERENCES Association(id);
 
 ALTER TABLE Donation
-    ADD CONSTRAINT donationXDonationReportFK FOREIGN KEY (donationReportId) 
-    REFERENCES DonationReport(id);
+    ADD CONSTRAINT fkDonationDonationType FOREIGN KEY (donationTypeId) 
+    REFERENCES DonationType(id);
 
 ALTER TABLE Donation
-    ADD CONSTRAINT donationXCurrencyFK FOREIGN KEY (currencyId) 
+    ADD CONSTRAINT fkDonationCurrency FOREIGN KEY (currencyId) 
     REFERENCES Currency(id);

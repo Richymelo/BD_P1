@@ -14,4 +14,4 @@ ALTER TABLE District
 
 ALTER TABLE District
     ADD CONSTRAINT districtXCantonFK FOREIGN KEY (cantonId) 
-    REFERENCES Canton(id);
+    REFERENCES Canton(idCanton);

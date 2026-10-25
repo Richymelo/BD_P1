@@ -14,4 +14,4 @@ ALTER TABLE Breed
 
 ALTER TABLE Breed
     ADD CONSTRAINT breedXPetTypeFK FOREIGN KEY (petTypeId) 
-    REFERENCES PetType(id);
+    REFERENCES PetType(idPetType);

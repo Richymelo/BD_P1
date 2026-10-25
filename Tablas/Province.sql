@@ -14,4 +14,4 @@ ALTER TABLE Province
 
 ALTER TABLE Province
     ADD CONSTRAINT provinceXCountryFK FOREIGN KEY (countryId) 
-    REFERENCES Country(id);
+    REFERENCES Country(idCountry);

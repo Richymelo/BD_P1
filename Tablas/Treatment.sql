@@ -14,4 +14,4 @@ ALTER TABLE Treatment
 
 ALTER TABLE Treatment
     ADD CONSTRAINT treatmentXDiseaseFK FOREIGN KEY (diseaseId) 
-    REFERENCES Disease(id);
+    REFERENCES Disease(idDisease);

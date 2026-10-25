@@ -15,7 +15,7 @@ CREATE TABLE Pet (
     modifiedAt TIMESTAMP(6) NOT NULL,
     districtId NUMBER(8) NOT NULL, --FK
     breedId NUMBER(8) NOT NULL, --FK
-    statusId NUMBER(8) NOT NULL, --FK
+    stateId NUMBER(8) NOT NULL, --FK
     colorId NUMBER(8) NOT NULL, --FK
     sizeId NUMBER(8) NOT NULL, --FK
     energyLevelId NUMBER(8) NOT NULL, --FK
@@ -33,48 +33,48 @@ ALTER TABLE Pet
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXDistrictFK FOREIGN KEY (districtId) 
-    REFERENCES District(id);
+    REFERENCES District(idDistrict);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXBreedFK FOREIGN KEY (breedId) 
-    REFERENCES Breed(id);
+    REFERENCES Breed(idBreed);
 
 ALTER TABLE Pet
-    ADD CONSTRAINT petXStateFK FOREIGN KEY (statusId) 
-    REFERENCES Status(id);
+    ADD CONSTRAINT petXStateFK FOREIGN KEY (stateId) 
+    REFERENCES State(idState);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXColorFK FOREIGN KEY (colorId) 
-    REFERENCES Color(id);
+    REFERENCES Color(idColor);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXSizeFK FOREIGN KEY (sizeId) 
-    REFERENCES Size(id);
+    REFERENCES Size(idSize);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXEnergyLevelFK FOREIGN KEY (energyLevelId) 
-    REFERENCES EnergyLevel(id);
+    REFERENCES EnergyLevel(idEnergyLevel);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXTrainabilityFK FOREIGN KEY (trainabilityId) 
-    REFERENCES Trainability(id);
+    REFERENCES Trainability(idTrainability);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXVeterinarianFK FOREIGN KEY (veterinarianId) 
-    REFERENCES Veterinarian(userId);
+    REFERENCES Veterinarian(personId);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXDiseaseFK FOREIGN KEY (diseaseId) 
-    REFERENCES Disease(id);
+    REFERENCES Disease(idDisease);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXFosterHomeFK FOREIGN KEY (fosterHomeId) 
-    REFERENCES FosterHome(id);
+    REFERENCES FosterHome(idFosterHome);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXRescuerFK FOREIGN KEY (rescuerId) 
-    REFERENCES Rescuer(userId);
+    REFERENCES Rescuer(personId);
 
 ALTER TABLE Pet
     ADD CONSTRAINT petXSeverityFK FOREIGN KEY (severityId) 
-    REFERENCES Severity(id);
+    REFERENCES Severity(idSeverity);

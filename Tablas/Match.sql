@@ -16,8 +16,8 @@ ALTER TABLE Match
 
 ALTER TABLE Match
     ADD CONSTRAINT matchXLostPetFK FOREIGN KEY (lostPetId) 
-    REFERENCES Pet(id);
+    REFERENCES Pet(idPet);
 
 ALTER TABLE Match
     ADD CONSTRAINT matchXFoundPetFK FOREIGN KEY (foundPetId) 
-    REFERENCES Pet(id);
+    REFERENCES Pet(idPet);

@@ -21,8 +21,8 @@ ALTER TABLE Adoption
     REFERENCES Person(idPerson);
 
 ALTER TABLE Adoption
-    ADD CONSTRAINT adoptionXAdopterFK FOREIGN KEY (adopterId) 
-    REFERENCES Adopter(userId);
+    ADD CONSTRAINT adoptionXAdopterFK FOREIGN KEY (AdopterId) 
+    REFERENCES Adopter(idAdopter);
 
 ALTER TABLE Adoption
     ADD CONSTRAINT adoptionXPetFK FOREIGN KEY (petId) 

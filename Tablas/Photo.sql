@@ -15,8 +15,8 @@ ALTER TABLE Photo
 
 ALTER TABLE Photo
     ADD CONSTRAINT photoXAcceptedTypeFK FOREIGN KEY (acceptedTypeId) 
-    REFERENCES AcceptedType(id);
+    REFERENCES AcceptedType(idAcceptedType);
 
 ALTER TABLE Photo
     ADD CONSTRAINT photoXTypeFK FOREIGN KEY (typeId) 
-    REFERENCES type(id);
+    REFERENCES type(idType);
