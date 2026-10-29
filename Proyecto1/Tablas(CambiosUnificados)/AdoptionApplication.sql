@@ -1,0 +1,23 @@
+CREATE TABLE AdoptionApplication (
+    id NUMBER(8) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    applicationDate DATE NOT NULL,
+    createdBy VARCHAR2(50) NOT NULL,
+    createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    modifiedBy VARCHAR2(50) NOT NULL,
+    modifiedAt TIMESTAMP(6) NOT NULL,
+    adopterId NUMBER(8) NOT NULL, --FK
+    statusId NUMBER(8) NOT NULL --FK
+);
+
+ALTER TABLE AdoptionApplication
+    ADD CONSTRAINT adoptionApplicationPk PRIMARY KEY (id)
+    USING INDEX TABLESPACE GEIndex;
+
+ALTER TABLE AdoptionApplication
+    ADD CONSTRAINT adoptionApplicationXAdopterFK FOREIGN KEY (adopterId) 
+    REFERENCES Adopter(userId);
+
+ALTER TABLE AdoptionApplication
+    ADD CONSTRAINT adoptionApplicationXStatusFK FOREIGN KEY (statusId) 
+    REFERENCES Status(id);
