@@ -1,14 +1,14 @@
 CREATE TABLE Pet (
     id NUMBER(8) NOT NULL,
     name VARCHAR2(50) NOT NULL,
-    chipId VARCHAR2(50) NOT NULL,
-    dateOfBirth DATE NOT NULL,
+    chipId VARCHAR2(50),
+    dateOfBirth DATE,
     age NUMBER(8) NOT NULL,
     eventDate DATE NOT NULL,
-    rewardAmount NUMBER(8) NOT NULL,
-    needsSpace VARCHAR2(50) NOT NULL,
-    place VARCHAR2(50) NOT NULL,
-    description VARCHAR2(50) NOT NULL,
+    rewardAmount NUMBER(8),
+    needsSpace VARCHAR2(50),
+    place VARCHAR2(50),
+    description VARCHAR2(50),
     createdBy VARCHAR2(50) NOT NULL,
     createdAt TIMESTAMP(6) DEFAULT CURRENT_TIMESTAMP NOT NULL,
     modifiedBy VARCHAR2(50) NOT NULL,
@@ -20,12 +20,14 @@ CREATE TABLE Pet (
     sizeId NUMBER(8) NOT NULL, --FK
     energyLevelId NUMBER(8) NOT NULL, --FK
     trainabilityId NUMBER(8) NOT NULL, --FK
-    veterinarianId NUMBER(8) NOT NULL, --FK
-    diseaseId NUMBER(8) NOT NULL, --FK
-    fosterHomeId NUMBER(8) NOT NULL, --FK
-    rescuerId NUMBER(8) NOT NULL, --FK
-    severityId NUMBER(8) NOT NULL --FK
+    veterinarianId NUMBER(8), --FK
+    diseaseId NUMBER(8), --FK
+    fosterHomeId NUMBER(8), --FK
+    rescuerId NUMBER(8), --FK
+    severityId NUMBER(8) --FK
 );
+
+
 
 ALTER TABLE Pet
     ADD CONSTRAINT petPk PRIMARY KEY (id)
